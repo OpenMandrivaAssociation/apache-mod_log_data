@@ -1,0 +1,24 @@
+--- mod_log_data.c	2003-04-23 14:22:35.000000000 +0200
++++ mod_log_data.c.oden	2005-12-16 10:37:25.000000000 +0100
+@@ -308,7 +308,9 @@
+ 
+     ap_log_error(APLOG_MARK, APLOG_NOERRNO | APLOG_DEBUG, 0, r->server,
+ 		 "Entering brigade %i", data_log->num_brigade);
+-    APR_BRIGADE_FOREACH(e, bb) {
++    for (e = APR_BRIGADE_FIRST(bb);
++         e != APR_BRIGADE_SENTINEL(bb);
++         e = APR_BUCKET_NEXT(e)) {
+ 
+ 	const char *str = NULL;
+ 	int length = 0;
+@@ -401,7 +403,9 @@
+ 
+     ap_log_error(APLOG_MARK, APLOG_NOERRNO | APLOG_DEBUG, 0, r->server,
+ 		 "Entering brigade %i", data_log->num_brigade);
+-    APR_BRIGADE_FOREACH(e, bb) {
++    for (e = APR_BRIGADE_FIRST(bb);
++         e != APR_BRIGADE_SENTINEL(bb);
++         e = APR_BUCKET_NEXT(e)) {
+ 
+ 	const char *str = NULL;
+ 	int length = 0;
