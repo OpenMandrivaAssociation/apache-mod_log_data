@@ -6,7 +6,7 @@
 Summary:	DSO module for the apache web server
 Name:		apache-%{mod_name}
 Version:	0.0.3
-Release:	15
+Release:	16
 Group:		System/Servers
 License:	Apache License
 URL:		http://loghttp.sourceforge.net/
