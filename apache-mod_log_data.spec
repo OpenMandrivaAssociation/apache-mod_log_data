@@ -9,7 +9,7 @@ Version:	0.0.3
 Release:	16
 Group:		System/Servers
 License:	Apache License
-URL:		http://loghttp.sourceforge.net/
+URL:		https://loghttp.sourceforge.net/
 Source0:	%{mod_name}-%{version}.tar.bz2
 Source1:	%{mod_conf}.bz2
 Source2:	README.html.bz2
